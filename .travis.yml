@@ -9,11 +9,8 @@ matrix:
           - ubuntu-toolchain-r-test
           packages:
           - g++-7
-          - libfftw3-dev
-          - libgsl0-dev
-          - libncurses-dev
-      env:
-      - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+     env:
+      - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7 && CONDA_OS=Linux"
     - os: linux
       addons:
         apt:
@@ -22,26 +19,23 @@ matrix:
           - llvm-toolchain-trusty-5.0
           packages:
           - clang-5.0
-          - libfftw3-dev
-          - libgsl0-dev
-          - libncurses-dev
       env:
-      - MATRIX_EVAL="CC=clang-5.0 && CXX=clang++-5.0"
+      - MATRIX_EVAL="CC=clang-5.0 && CXX=clang++-5.0 && CONDA_OS=Linux"
     - os: osx
       osx_image: xcode10
       compiler: clang
+      env:
+      - MATRIX_EVAL="CONDA_OS=MacOSX"
 
 before_install:
 - eval "${MATRIX_EVAL}"
 - |
-  if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-    wget "http://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh" -O miniconda.sh;
-    bash miniconda.sh -b -p $HOME/miniconda
-    export PATH="$HOME/miniconda/bin:$PATH"
-    hash -r
-    conda update -yq conda
-    conda install -y cmake gsl fftw asv -c conda-forge
-  fi
+  wget "http://repo.continuum.io/miniconda/Miniconda3-latest-${CONDA_OS}-x86_64.sh" -O miniconda.sh;
+  bash miniconda.sh -b -p $HOME/miniconda
+  export PATH="$HOME/miniconda/bin:$PATH"
+  hash -r
+  conda update -yq conda
+  conda install -y cmake gsl fftw asv -c conda-forge
 
 script:
 - asv dev
