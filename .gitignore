@@ -1,6 +1,6 @@
 # asv/barcode specific ignores
 barcode
-.asv
+.asv/env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
