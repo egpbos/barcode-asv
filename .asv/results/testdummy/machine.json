@@ -1,7 +1,7 @@
 {
     "arch": "x86_64",
     "cpu": "Some virtual CPU",
-    "machine": "testy mctestingson",
+    "machine": "testdummy",
     "os": "any",
     "ram": "4GB",
     "version": 1
