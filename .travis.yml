@@ -32,7 +32,7 @@ before_install:
           "arch": "x86_64",
           "cpu": "Some virtual CPU",
           "machine": "testdummy",
-          "os": "any,
+          "os": "any",
           "ram": "4GB"
       },
       "version": 1
