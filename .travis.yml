@@ -25,19 +25,7 @@ before_install:
   hash -r
   conda update -yq conda
   conda install -y cmake gsl fftw asv -c conda-forge
-- |
-  cat > ~/.asv-machine.json << EOF
-{
-    "testdummy": {
-        "arch": "x86_64",
-        "cpu": "Some virtual CPU",
-        "machine": "testdummy",
-        "os": "any",
-        "ram": "4GB"
-    },
-    "version": 1
-}
-EOF
+- cp asv-machine_testdummy.json ~/.asv-machine.json
 
 script:
 - asv dev --machine testdummy
