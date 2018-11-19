@@ -28,4 +28,4 @@ before_install:
 - cp asv-machine_testdummy.json ~/.asv-machine.json
 
 script:
-- asv dev --machine testdummy
+- asv run --machine testdummy
