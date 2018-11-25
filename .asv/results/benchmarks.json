@@ -1,0 +1,19 @@
+{
+    "benchmarks.RunBarcode.time_barcode_run": {
+        "code": "class RunBarcode:\n    def time_barcode_run(self):\n        barcode_exe = os.environ[\"ASV_ENV_DIR\"] + '/bin/barcode'\n        subprocess.run([barcode_exe], stdout=subprocess.PIPE, cwd=self.working_dir)\n\n    def setup(self):\n        try:\n            os.makedirs(self.working_dir + \"/tmp_data\")\n        except FileExistsError:\n            # clean up and retry\n            self.teardown()\n            os.makedirs(self.working_dir + \"/tmp_data\")",
+        "min_run_count": 2,
+        "name": "benchmarks.RunBarcode.time_barcode_run",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "processes": 2,
+        "repeat": 0,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "561a944f849c1f2402642a04119f0cc8947f0dac594908b5be9b834a9eee399b",
+        "warmup_time": -1
+    },
+    "version": 2
+}
