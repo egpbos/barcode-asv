@@ -5,7 +5,7 @@
     "commit_hash": "7e408c435193f91b4afc78125a0616f905043562",
     "date": 1543144858000,
     "ended_at": {
-        "benchmarks.RunBarcode.time_barcode_run": 1543171400331
+        "benchmarks.RunBarcode.time_barcode_run": 1543171852118
     },
     "env_name": "conda-py3.6-cmake-fftw-gsl",
     "params": {
@@ -29,28 +29,28 @@
     "results": {
         "benchmarks.RunBarcode.time_barcode_run": {
             "result": [
-                0.011066000000000006
+                0.010417999999999997
             ],
             "stats": [
                 {
                     "ci_99": [
-                        -0.008333999999999273,
-                        0.030465999999999268
+                        -0.0002320000000002459,
+                        0.021068000000000232
                     ],
-                    "max": 0.011453999999999992,
-                    "mean": 0.011066000000000006,
-                    "min": 0.01067800000000002,
+                    "max": 0.010631000000000002,
+                    "mean": 0.010417999999999997,
+                    "min": 0.010204999999999992,
                     "number": 1,
-                    "q_25": 0.010872000000000014,
-                    "q_75": 0.01126,
+                    "q_25": 0.010311499999999994,
+                    "q_75": 0.0105245,
                     "repeat": 2,
-                    "std": 0.0003879999999999856
+                    "std": 0.00021300000000000485
                 }
             ]
         }
     },
     "started_at": {
-        "benchmarks.RunBarcode.time_barcode_run": 1543171384974
+        "benchmarks.RunBarcode.time_barcode_run": 1543171837175
     },
     "version": 1
 }

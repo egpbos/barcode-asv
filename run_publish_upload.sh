@@ -9,5 +9,6 @@ asv publish
 git add .asv/results/*/*.json
 git add docs
 
-git commit -a -m "[skip ci] New results from ${HOST}"
+hostname=$(hostname)
+git commit -a -m "[skip ci] New results from ${hostname}"
 git push
