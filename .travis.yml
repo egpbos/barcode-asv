@@ -1,11 +1,17 @@
 language: cpp
 
-matrix:
+jobs:
   include:
     - os: linux
       compiler: gcc
+      addons:
+        apt:
+          sources:
+          - ubuntu-toolchain-r-test
+          packages:
+          - g++-7
       env:
-      - MATRIX_EVAL="CONDA_OS=Linux"
+      - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7 && CONDA_OS=Linux"
     - os: linux
       compiler: clang
       env:
