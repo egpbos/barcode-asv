@@ -5,6 +5,7 @@ import shutil
 class RunBarcode:
     working_dir = os.environ['ASV_CONF_DIR']
     timeout = 600  # seconds
+    repeat = 10
 
     def setup(self):
         try:
