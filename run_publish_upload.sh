@@ -3,6 +3,9 @@
 # exit on error
 set -e
 
+# cd to script location
+cd "$(dirname "$0")"
+
 asv run
 asv publish
 
