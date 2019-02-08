@@ -1,4 +1,4 @@
-AWS
+# AWS
 
 1. image aanslingeren
 2. ssh erin met pem file enzo
@@ -7,9 +7,9 @@ AWS
 3. key maken, ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 4. 
 
-Google Cloud
+# Google Cloud
 
-VM AANSLINGEREN
+## VM AANSLINGEREN
 1. bij Google krijg je 1 jaar lang 24/7 gratis VM (f1-micro); eentje aangemaakt genaamd eerste-testje
 NEXT TRY: new machine, gcloud-f1-micro-test; Ubuntu 18.10 Minimal (it creates and activates in less than a minute, quite nice)
 NEXT TRY 2: Minimal is reaaally minimal, back to normal Ubuntu 18.10; gcloud-f1-micro-test2
@@ -25,7 +25,7 @@ gcloud compute --project "ambient-sphere-225518" ssh --zone "us-east1-b" "gcloud
 ```
 
 
-SETUP
+## SETUP
 0. NEXT TRY: sudo apt-get install vim
 NEXT TRY 2: never mind, that was for Minimal Ubuntu
 1. GitHub key aanmaken zodat je benchmarks terug kunt committen
@@ -50,7 +50,7 @@ Everything on default, except the last question: enter yes to configure Bash for
 4. pip install asv
 5. git clone git@github.com:egpbos/barcode-asv.git
 
-FIRST ASV RUN (INCLUDES CONFIG)
+## FIRST ASV RUN (INCLUDES CONFIG)
 1. cd barcode-asv
 2. asv run
 Now it will ask the machine name; I wanted to use gcloud_eerste-testje, which is not the hostname, which makes it necessary to use --machine gcloud_eerste-testje, which is annoying, so I just used eerste-testje. Lesson: name the gcloud VM well.
@@ -63,5 +63,11 @@ But in the end it turns out I need conda after all, since I used that as the dep
 
 - To get a reasonably stable measurement on the f1-micro, you need about 10 repeats, so using that now. May not be necessary on other machines though!
 
-NORMAL RUN ASV
-barcode-asv/run_publish_upload.sh
+## NORMAL RUN ASV
+1. A normal run will also include a commit step. For this we need Git to be properly setup.
+```sh
+git config --global user.email "$USER@$HOSTNAME"
+git config --global user.name "E. G. Patrick Bos"
+```
+
+2. Run with `barcode-asv/run_publish_upload.sh`
