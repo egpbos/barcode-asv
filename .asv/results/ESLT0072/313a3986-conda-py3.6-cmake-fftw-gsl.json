@@ -1,0 +1,56 @@
+{
+    "benchmark_version": {
+        "benchmarks.RunBarcode.time_barcode_run": "561a944f849c1f2402642a04119f0cc8947f0dac594908b5be9b834a9eee399b"
+    },
+    "commit_hash": "313a398634ba69c04b02726501032dc20743e630",
+    "date": 1548678334000,
+    "ended_at": {
+        "benchmarks.RunBarcode.time_barcode_run": 1549649907230
+    },
+    "env_name": "conda-py3.6-cmake-fftw-gsl",
+    "params": {
+        "arch": "x86_64",
+        "cmake": "",
+        "cpu": "Intel(R) Core(TM) i5-6267U CPU @ 2.90GHz",
+        "fftw": "",
+        "gsl": "",
+        "machine": "ESLT0072",
+        "os": "Darwin 18.0.0",
+        "python": "3.6",
+        "ram": "16GB"
+    },
+    "profiles": {},
+    "python": "3.6",
+    "requirements": {
+        "cmake": "",
+        "fftw": "",
+        "gsl": ""
+    },
+    "results": {
+        "benchmarks.RunBarcode.time_barcode_run": {
+            "result": [
+                0.01231800000000001
+            ],
+            "stats": [
+                {
+                    "ci_99": [
+                        0.011043999999999998,
+                        0.013032000000000016
+                    ],
+                    "max": 0.01608799999999999,
+                    "mean": 0.012299800000000005,
+                    "min": 0.010501000000000038,
+                    "number": 1,
+                    "q_25": 0.011182750000000012,
+                    "q_75": 0.012675000000000006,
+                    "repeat": 20,
+                    "std": 0.0013076957061946737
+                }
+            ]
+        }
+    },
+    "started_at": {
+        "benchmarks.RunBarcode.time_barcode_run": 1549649820207
+    },
+    "version": 1
+}
