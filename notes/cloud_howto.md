@@ -9,8 +9,6 @@
 
 # Google Cloud
 
-Below a chronological account of my attempts to get this working. But first the summarized version.
-
 ## Create and access VM
 1. Setup a machine
 
